@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app = "myApp">
+    <head>
+            <meta charset="utf-8">
+        <title src="logo.gif">Welcome to BooKart</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+         <script type="text/javascript" src="ngDialog.js"></script>
+         <link href="ngDialog.css" rel="stylesheet">
+		<script src="app.js"></script>
+		<link href="ngDialog-theme-plain.css" rel="stylesheet">
+		
+    </head>
+     <body>
+        
+        <div id="headerWrapper" ng-controller="HeaderCtrl">
+            <span class="logo pull-left"><img src="{{appDetails.title}}"></span>
+            <span class="tagline pull-left">{{appDetails.tagline}}</span>
+           <!--  <button class="btn btn-info pull-right" ><a href="#/signin">signin</a></button>
+            <button class="btn btn-info pull-right" ng-click="">login</button> -->
+            <div class="nav-wrapper pull-left">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#/books">Books</a></li>
+                    <li><a href="#/kart">Kart</a></li>
+                    <!--  <li><a href="#/link1">details</a></li> -->
+                </ul>
+            </div>
+        </div>
+		
+		<div ng-view class="container"></div>
+		
+    </body>
+</html>

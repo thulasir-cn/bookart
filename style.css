@@ -1,0 +1,127 @@
+body{
+    width: auto;
+    height: auto;
+    background-color: #57b6f2;
+}
+
+#headerWrapper {
+    width: 100%;
+    background-color: blue;
+}
+#headerWrapper img{
+    width: 200px;
+    height: 50px;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10x;
+    font-size: 35px;
+    
+}
+
+.tagline {
+    font-size: 10px;
+    margin-top: 50px;
+    margin-left: -123px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#bookListWrapper {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    top: 100px;
+}
+
+#bookListWrapper input {
+    width: 25%;
+    position: relative;
+    left: 0px;
+}
+
+#bookListWrapper .book {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;    
+}
+
+#bookListWrapper .book .book-details {
+    margin-left: 160px;
+}
+.link1{
+
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    top: 250px;
+    background-color: skyblue;
+
+}
+#signin{
+    
+    position: relative;
+    top: 200px;
+    background-color: skyblue;
+}
+
+#signin form[novalidate].input{
+border-left-width: 8px;
+border-color:#3498db;
+border-style: solid;
+}
+#signin input[required].ng-pristine{
+    border-color: #e74c3c;
+}
+#signin input.ng-invalid.ng-dirty{
+    border-color: #e74c3c;
+}
+#signin input.ng-valid.ng-dirty{
+    border-color: #2ecc71;
+}
+
+
+.container.ng-enter {
+    -webkit-transition:0.5s linear all;
+     -moz-transition:0.5s linear all;
+     -o-transition:0.5s linear all;
+     transition:0.5s linear all;
+     opacity:0;
+}
+
+.container.ng-enter-active {
+     opacity:1;
+}
+
+.book.ng-leave {
+    -webkit-transition:0.5s linear all;
+     -moz-transition:0.5s linear all;
+     -o-transition:0.5s linear all;
+     transition:0.5s linear all;
+     opacity:1;
+     left: 0;
+}
+
+.book.ng-leave-active {
+    opacity:0;
+    left: 600px;
+}
+
+.book.ng-enter {
+    -webkit-transition:0.5s linear all;
+     -moz-transition:0.5s linear all;
+     -o-transition:0.5s linear all;
+     transition:0.5s linear all;
+     opacity:0;
+     left: 600px;
+}
+
+.book.ng-enter-active {
+    opacity:1;
+    left: 0;
+}

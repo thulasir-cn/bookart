@@ -1,0 +1,32 @@
+<div id="bookListWrapper">
+	<form class="form-search" role="form">
+	  
+		<input type="text" class="form-control" placeholder="Search here..." ng-model="serchStrng">
+		SortBy:
+		<select ng-model="filterCost">
+			      <option value="name">Name</option>
+			      <option value="price">Price</option>
+			      <option value="rating">popular</option>
+ 		</select>
+ 		<!-- <input type="checkbox" value="Adultery" ng-model="checkbox">brand -->
+</form>
+	<ul class="list-unstyled">
+		<li class="book" ng-animate=" 'animate'" ng-repeat="book in books | filter:serchStrng | orderBy: filterCost | filter:checkbox"
+			style="background: white url('imgs1/{{book.imgUrl}}') no-repeat">
+			<div class="book-details clearfix">
+				<!-- <p>{{index+1}}</p> -->
+				<h3><a  href="#/link1">{{book.name}}</a></h3>	
+				<p>{{book.price | currency:'Rs.'}}</p>
+				<ul  class="list-unstyled list-inline">
+					<li>Rating: {{book.rating}}</li>
+					<li>Binding: {{book.binding}}</li>
+					<li>Publisher: {{book.publisher}}</li>
+					<li>Released: {{book.releaseDate}}</li>
+					<!-- <li><a href="https://www.google.co.in/{{book.avilableplace}}"><img src="location.jpg"></a></li>  -->
+				</ul>
+				<button class="btn btn-info pull-right" ng-click="buy(book)">Buy</button>
+				<button class="btn btn-info pull-right" ng-click="addToKart(book)">Add to Kart</button>
+			</div>
+		</li>
+	</ul>
+</div>

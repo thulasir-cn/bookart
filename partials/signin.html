@@ -1,0 +1,21 @@
+<div id="signin">
+<fieldset>
+<h3>Signin</h3>
+<form name="form"  ng-submit="registerUser()" novalidate>
+	
+	Name : <input type="name" ng-model="newUser.name" required></br>
+	email : <input type="email" ng-model="newUser.email" required></br>
+	password:<input 
+					type="password"
+					ng-model="newUser.password"
+					required
+					ng-minlength="6"></br>
+	<p 
+	ng-show="form.password.$error.minlength || form.password.$invalid">
+	password must be at least 6 characters</p>		</br>
+	<label class="checkbox"><input type="checkbox" ng-model="newUser.terms" value="1" required>I accepted terms and conditions</label></br>	
+	<button ng-disabled="form.$invalid">Submit</button>	
+</form>
+</fieldset>
+</div>
+
